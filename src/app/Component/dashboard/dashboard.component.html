@@ -1,0 +1,112 @@
+<div  class="container-fluid">
+  <img src="https://images8.alphacoders.com/115/1152301.png" style="width: 100px;" alt="">
+ </div>
+
+ <div class="container-fluid m-0 p-0">
+  <ngb-carousel *ngIf="images" style="width: 100%; max-height: 200px;">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://images2.alphacoders.com/280/280472.jpg" style="height: 300px; width: 100%;" alt="Random first slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://images2.alphacoders.com/589/thumb-1920-589553.png" width="100%" alt="Random second slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://wallpapers.com/images/hd/fast-and-furious-1970-dodge-charger-lmk81um1c4r1tnyd.jpg" width="100%" alt="Random third slide" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+
+<div class="container-fluid m-0 p-0">
+
+  
+    
+   
+      <div class="row mt-3 pt-2 px-2" >
+        <h6 class="text-white">Popular Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of popularMovies?.results; let i = index">
+          <div class="card bg-dark zoom-card" *ngIf="i < 6" style="height: 380px; width: 200px;">
+            <img src="{{ movie?.backdrop_path }}" class="card-img-top" alt="..." style="height: 200px;" />
+            <div class="card-body">
+              <h5 class="card-title text-white">{{ movie.title }}</h5>
+              <p class="text-white"><span class="text-warning text-white">Release</span>: {{ movie?.release_date }}</p>
+              <p class="text-white"><span class="text-warning text-white">Rating</span>: {{ movie?.vote_average }}</p>
+              <p>Language:<span class="p-1"><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3 pt-2 px-2" >
+        <h6 class="text-white">Pop Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of topRatedMovies?.results; let i = index">
+          <div class="card bg-dark zoom-card" *ngIf="i < 6" style="height: 380px; width: 200px;">
+            <img src="{{ movie?.backdrop_path }}" class="card-img-top" alt="..." style="height: 250px;" />
+            <div class="card-body">
+              <h5 class="card-title text-white">{{ movie.title }}</h5>
+              <p><span class="text-warning text-white">Rating</span>: {{ movie?.vote_average }}</p>
+             
+              <p>Language: <span class="p-1" ><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3 pt-2 px-2">
+        <h6 class="text-white">Now playing Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i = index">
+          <div class="card bg-dark zoom-card" *ngIf="i < 6" style="height: 380px; width: 200px;">
+            <img src="{{ movie?.backdrop_path }}" class="card-img-top" alt="..." style="height: 250px;" />
+            <div class="card-body">
+              <h5 class="card-title text-white">{{ movie.title }}</h5>
+              <p><span class="text-warning text-white">Rating</span>: {{ movie?.vote_average }}</p>
+             
+              <p>Language: <span class="p-1" ><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-3 pt-2 px-2">
+        <h6 class="text-white">Up Coming Movies</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of upcomingMovies?.results; let i = index">
+          <div class="card bg-dark zoom-card" *ngIf="i < 6" style="height: 380px; width: 200px;">
+            <img src="{{ movie?.backdrop_path }}" class="card-img-top" alt="..." style="height: 250px;" />
+            <div class="card-body">
+              <h5 class="card-title text-white">{{ movie.title }}</h5>
+              <p><span class="text-warning text-white">Rating</span>: {{ movie?.vote_average }}</p>
+             
+              <p>Language: <span class="p-1" ><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3 pt-2 px-2">
+        <h6 class="text-white">Orginals</h6>
+        <div class="col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i = index">
+          <div class="card bg-dark zoom-card" *ngIf="i < 6" style="height: 380px; width: 200px;">
+            <img src="{{ movie?.backdrop_path }}" class="card-img-top" alt="..." style="height: 250px;" />
+            <div class="card-body">
+              <h5 class="card-title text-white">{{ movie.title }}</h5>
+              <p><span class="text-warning text-white">Rating</span>: {{ movie?.vote_average }}</p>
+             
+              <p>Language: <span class="p-1" ><b>{{ movie.original_language }}</b></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      
+        
+
+    </div>
